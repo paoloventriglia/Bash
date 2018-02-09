@@ -1,5 +1,5 @@
 # Run yum update and install make and gcc
-# yum update && yum install -y make gcc
+# yum update -y && yum install -y make gcc
 
 # Unpack source code files
 tar xvzf redis-3.2.8.tar.gz
@@ -7,7 +7,7 @@ tar xvzf redis-3.2.8.tar.gz
 # Change directory to redis
 cd redis-3.2.8
 
-# Compile the src code file, this will require oyu have make and gcc installed
+# Compile the src code file, this will require make and gcc (if you need to install them uncomment the second line)
 make
 
 # Make install will copy the executable to the relevant locations
