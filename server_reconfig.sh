@@ -68,7 +68,7 @@ echo ""
 cat <<EOF > /etc/sysconfig/network
 
 HOSTNAME=$1
-DOMAIN=domain.local
+DOMAIN=wok1.egalacoral.com
 NOZEROCONF=yes
 NETWORKING=yes
 IPV6INIT=no
@@ -86,7 +86,7 @@ echo ""
 
 cat <<EOF > /etc/hosts
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
-$3 $1.domain.local $1
+$3          $1.wok1.egalacoral.com $1
 EOF
   service puppet stop
   chkconfig puppet off
@@ -132,7 +132,7 @@ echo ""
 cat <<EOF > /etc/sysconfig/network
 
 HOSTNAME=$1
-DOMAIN=domain.local
+DOMAIN=wok1.egalacoral.com
 NOZEROCONF=yes
 NETWORKING=yes
 IPV6INIT=no
@@ -150,7 +150,7 @@ echo ""
 
 cat <<EOF > /etc/hosts
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
-$3 $1.domain.local $1
+$3          $1.wok1.egalacoral.com $1
 EOF
 
   systemctl stop puppet
@@ -202,7 +202,7 @@ EOF
 
 cat <<EOF > /etc/hosts
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
-$3          $1.domain.local $1
+$3          $1.wok1.egalacoral.com $1
 EOF
   service puppet stop
   rm /etc/puppetlabs/puppet/ssl -rf
