@@ -1,5 +1,17 @@
-# Run yum update and install make and gcc
-# yum update -y && yum install -y make gcc
+#!/bin/bash
+
+#__author__ = "Paolo Ventriglia"
+#__credits__ = ["Paolo Ventriglia"]
+#__license__ = "GPL"
+#__version__ = ""
+#__maintainer__ = "Paolo Ventriglia"
+#__email__ = "paolo@corebox.co.uk"
+
+
+# This script install redis on a pre-systemd linux server
+
+# Install make and gcc
+yum install -y make gcc
 
 # Unpack source code files
 tar xvzf redis-3.2.8.tar.gz
@@ -17,19 +29,10 @@ make install
 mkdir /etc/redis
 
 # Create working directory
+mkdir /var/redis
 mkdir /var/redis/redisd
-
-# Copy init script file from utils to init.d 
-cp utils/redisd /etc/init.d/redisd
 
 # Copy redis config file /etc/redis
 cp redis.conf /etc/redis/redis.conf
 
-# Add redis service to chkconfig
-chkconfig --add redisd
 
-# Enable redis service to start at startup
-chkconfig redisd on
-
-# Make redis service script executable
-chmod +x  /etc/init.d/redisd

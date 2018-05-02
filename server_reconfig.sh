@@ -1,8 +1,11 @@
 #!/bin/bash
 
-# Author: Paolo ventriglia
-# Filename: server_reconfig.sh
-# Version: 0.2
+#__author__ = "Paolo Ventriglia"
+#__credits__ = ["Paolo Ventriglia"]
+#__license__ = "GPL"
+#__version__ = ""
+#__maintainer__ = "Paolo Ventriglia"
+#__email__ = "paolo@corebox.co.uk"
 
 # The script backup and reconfigure the following files base on the given arguments
 # /etc/sysconfig/network-scripts/ifcfg-eth?
